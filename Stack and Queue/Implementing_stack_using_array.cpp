@@ -46,6 +46,13 @@ void display(STCK *s)
     return;
 }
 
+void middle(STCK *s)
+{
+    cout<<"Middle element: ";
+    cout<<s->p[s->top/2]<<endl;
+    return;
+}
+
 int main()
 {
     system("cls");
@@ -56,7 +63,7 @@ int main()
     s.top = -1;
     s.p = new int[s.size];
     label:
-    cout<<"Enter 1 to insert, 2 to delete, 3 to display: ";
+    cout<<"Enter 1 to insert, 2 to delete, 3 to display and 4 to find middle element: ";
     cin>>choose;
     switch (choose)
     {
@@ -66,6 +73,7 @@ int main()
             break;
     case 3: display(&s);
             break;
+    case 4: middle(&s);
     }
     cout<<endl<<"If you want to choose again enter 1 otherwise enter 0: ";
     cin>>choose;
