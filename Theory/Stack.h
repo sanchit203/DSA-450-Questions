@@ -55,6 +55,11 @@ class linkedliststack
         return x;
     }
 
+    node *to()
+    {
+        return top->data;
+    }
+
     int isEmpty()
     {
         if(top==NULL)
